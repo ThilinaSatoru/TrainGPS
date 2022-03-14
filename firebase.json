@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "monitor-map",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
