@@ -1,0 +1,78 @@
+@import '../../sass/colors.scss';
+@import '../../sass/fonts.scss';
+
+.header-contact {
+  background-color: $bg;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10em;
+  overflow: auto;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    color: $primary;
+    font-size: var(--step-4);
+    line-height: 1;
+  }
+}
+
+.box-contact {
+  padding: max(3vh, 10%);
+  width: min(90%, 60vw);
+  margin-inline: auto;
+  background-color: $barDarker;
+  color: #fff;
+  overflow: hidden;
+  h2 {
+    text-transform: uppercase;
+    padding: 0; margin: 0;
+    color: $primary;
+    font-family: 'Russo One', sans-serif;
+    font-size: var(--step-2);
+    line-height: 1;
+  }
+}
+
+.box-contact {
+  #subH2 {
+    color: $lightest;
+    font-size: var(--step-1);
+    line-height: 1;
+  }
+
+  .img-row{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    margin-top: 5em;
+
+    .ilogo{
+    width: 9em;
+    height: 9em;
+    background-image: url(../../assets/Sri_Lanka_Railway_logo.png);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+  }
+  .ilogo2{
+    margin-left: 7em;
+    width: 50%;
+    height: 9em;
+    background-image: url(../../assets/National_Institute_of_Business_Management_Logo.png);
+    overflow: hidden;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  }
+
+  
+
+  p {
+    color: #cccbcb;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--step-0);
+    line-height: 1;
+  }
+}

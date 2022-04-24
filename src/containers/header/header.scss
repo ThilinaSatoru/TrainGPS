@@ -1,0 +1,107 @@
+@import '../../sass/colors.scss';
+@import '../../sass/fonts.scss';
+
+.header {
+  /* margin-top: -5rem; */
+  background-color: $barDarker;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10em;
+  overflow: auto;
+}
+
+.box {
+  padding: max(3vh, 10%);
+  width: min(90%, 60vw);
+  margin-inline: auto;
+  background-color: $bg;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  // font-family: 'Russo One', sans-serif;
+  font-family: "RazerF5", Arial, Helvetica, sans-serif;
+  color:$primary;
+  font-size: var(--step-4);
+  line-height: 1;
+}
+
+.box {
+  h2 {
+    text-transform: uppercase;
+    padding: 0; margin: 0;
+    color: $txt_main;
+    font-family: 'Russo One', sans-serif;
+    font-size: var(--step-3);
+    line-height: 1;
+  }
+
+  #subH2 {
+    color: $icons;
+    font-size: var(--step-2);
+    line-height: 1;
+  }
+
+  p {
+    color: $navColor;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--step-0);
+    line-height: 1;
+  }
+}
+
+
+
+
+
+
+@keyframes cloud-anim {
+  from{
+    transform: translatex(0);
+    -webkit-transform: translatex(0);
+    -moz-transform: translatex(0);
+    -ms-transform: translatex(0);
+    -o-transform: translatex(0);
+}
+to{
+  transform: translatex(-100px);
+  -webkit-transform: translatex(-100px);
+  -moz-transform: translatex(-100px);
+  -ms-transform: translatex(-100px);
+  -o-transform: translatex(-100px);
+}
+}
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 1s both;
+	animation: tracking-in-contract 1s both;
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+} 
+

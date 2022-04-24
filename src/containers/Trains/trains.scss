@@ -1,0 +1,79 @@
+/* .fetch-comp{
+*{
+  font-family: 'Hansief', sans-serif;
+  font-weight: 100;
+} 
+/* ============================  TABLE ============================= */
+@import '../../sass/colors.scss';
+@import '../../sass/fonts.scss';
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+.flexy{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#header{
+  display: flex;
+  gap: 3rem;
+  padding: 1rem;
+  width: 100%;
+
+  position: sticky;
+  left: 0;
+  top: 0;
+
+  background-color: $bg_mid_dark;
+  th{
+    text-transform: uppercase;
+    font-family: 'Federo', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    color: $primary;
+  }
+}
+
+.-table {
+  width: 14%;
+  border-collapse: collapse;
+
+  td,th{
+    padding: .1em 1.4em;
+    border: 1px solid rgb(105, 105, 105);
+    font-size: 20px;
+  }
+  th{
+    color: $primary;
+    text-transform: uppercase;
+    font-family: 'Federo', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  
+  .td-row:hover{
+    background-color: $bg_main;
+    color: $darkest;
+    font-weight: 700;
+    cursor:pointer;
+  }
+  td{
+    font-family: 'Nova Mono', monospace;
+  }
+}
+
+@media (max-width: 650px){
+  .flexy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+

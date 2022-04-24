@@ -1,0 +1,118 @@
+@import '../../sass/colors.scss';
+@import '../../sass/fonts.scss';
+
+/* -------------------------------------------- */
+/* FOOTER  */
+/* -------------------------------------------- */
+
+.footer {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  bottom: 0;
+  padding: 1rem 1rem; 
+  width: 100%;
+  height: 12em;
+  background-color: $footer;
+  z-index: 2;
+
+  #foot-col-right {
+  text-align: right;
+  width: 30%;
+  }
+
+  #foot-col-left {
+    margin: 0;
+    padding:0;
+    text-align: left;
+    width: 50%;
+    margin-left: 10%;
+  }
+
+  #foot-col-right,
+  #foot-col-left{
+    h4{
+      margin:0;
+      padding: 5px 15px;
+      font-size: 15px;
+    }
+  }
+
+  #foot-col-right ul,
+  #foot-col-left ul {
+    font-size: 15px;
+    display: inline-block;
+  }
+
+
+
+  #green {
+    svg * { 
+      font-size: 20px;
+      padding-right: 10px;
+      color: $primary;
+    }
+    svg, li {
+      vertical-align: middle;
+      color: $primary;
+    }
+  }
+
+  #twitter:hover {
+    color: rgba(0, 172, 237, 1) !important;
+  }
+
+  #youtube:hover {
+    color: rgba(187, 0, 0, 1) !important;
+  }
+
+  #fb:hover {
+    color: rgba(59, 89, 152, 1) !important;
+  }
+
+  #twitch:hover {
+    color: rgba(145, 70, 255, 1) !important;
+  }
+
+  #foot-col-right li,
+  #foot-col-left li {
+    text-decoration: none;
+    color: #a5a5a5;
+    display: inline-block;
+    margin-inline: 10px;
+  }
+
+  #foot-col-right a,
+  #foot-col-left a {
+    text-decoration: none;
+    color: #a5a5a5;
+    padding: 0px;
+    word-spacing: 4px;
+  }
+
+  #foot-col-left a:hover,
+  #foot-col-left a:active {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+
+
+.span_1_of_2 {
+  width: 49.2%;
+}
+
+.col {
+  display: grid;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}

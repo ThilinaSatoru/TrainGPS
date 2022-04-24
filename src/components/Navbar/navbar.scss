@@ -1,0 +1,119 @@
+@import '../../sass/colors.scss';
+@import '../../sass/fonts.scss';
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/* primary header */
+.logo {
+  background-image: url(../../assets/Sri_Lanka_Railway_logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 4rem;
+  width: 4rem;
+
+  /* border: 1px solid; */
+}
+.hr-primary{
+    background-color: $primary;
+    height:1px;
+    width: 100%;
+  }
+
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7482%) hue-rotate(35deg) brightness(107%) contrast(102%);
+  -webkit-filter: invert(100%) sepia(0%) saturate(7482%) hue-rotate(35deg) brightness(107%) contrast(102%);
+}
+
+.filter-black {
+  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(327deg) brightness(96%) contrast(104%);
+}
+
+.primary-header {
+  width: 100%;
+  align-items: center;
+  background-color: $darkest;
+  z-index: 999;
+}
+
+.primary-navigation {
+  --gap:2.5em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+
+  li * {
+    text-decoration: none;
+    // font-family: 'Racing Sans One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: $navColor;
+    margin-inline-end: 0.75em;
+
+    &:hover{
+      color: $icons;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .mobile-nav-toggle {
+    position: fixed;
+    z-index: 100;
+    padding: .8rem;
+    background-color: #222;
+    color: $lightest;
+    width: 3rem;
+    top: 1.5rem;
+    right: 1rem;
+    border: 0;
+  }
+  .primary-navigation {
+    --gap:2em;
+    position: fixed;
+    z-index: 99;
+    inset: 0 0 0 60%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    background: hsl(0 0% 13% / 1);
+    transition: transform 350ms ease-out;
+    -webkit-transition: transform 350ms ease-out;
+    -moz-transition: transform 350ms ease-out;
+    -ms-transition: transform 350ms ease-out;
+    -o-transition: transform 350ms ease-out;
+
+    li * {
+      color: $lightest;
+    }
+
+    &[data-visible="true"] { 
+      transform: translatex(100%);
+      li{
+        visibility: hidden;
+      }
+      .mobile-nav-toggle{
+        background-color:red;
+      }
+    }
+  }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+      background: hsl(0 0% 13% / 0.7);
+      backdrop-filter: blur(1rem);
+    }
+  }
+
+  
+}
+
+@media (min-width: 750px) {
+  .mobile-nav-toggle {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,146 @@
+<div className="icon-train">
+            <div className="lvl2">
+              <span>
+                <svg viewBox="0 0 16 20" height="20" width="16">
+                  <path d="M15.85 19.15L12.57 15.87C14.34 15.39 15.55 13.62 15.19 11.71L13.63 3.35C13.31 1.64 11.92 0.29 10.18 0.12C9.47003 0.04 8.74003 0 8.00003 0C7.26003 0 6.53003 0.04 5.82003 0.11C4.08003 0.28 2.69003 1.63 2.37003 3.34L0.810029 11.7C0.770029 11.93 0.750029 12.16 0.750029 12.38C0.750029 14.02 1.87003 15.44 3.43003 15.86L0.140029 19.15C-0.169971 19.46 0.0600286 20 0.500029 20H1.72003C1.99003 20 2.24003 19.89 2.43003 19.71L6.13003 16H9.86003L13.57 19.71C13.76 19.9 14.01 20 14.28 20H15.5C15.94 20 16.17 19.46 15.85 19.15ZM13 12C13 12.55 12.55 13 12 13C11.45 13 11 12.55 11 12C11 11.45 11.45 11 12 11C12.55 11 13 11.45 13 12ZM4.14003 4.82C4.23003 4.34 4.64003 4 5.12003 4H10.88C11.36 4 11.77 4.34 11.86 4.82L12.24 6.82C12.35 7.43 11.88 8 11.26 8H4.74003C4.11003 8 3.64003 7.43 3.76003 6.82L4.14003 4.82ZM3.00003 12C3.00003 11.45 3.45003 11 4.00003 11C4.55003 11 5.00003 11.45 5.00003 12C5.00003 12.55 4.55003 13 4.00003 13C3.45003 13 3.00003 12.55 3.00003 12Z">
+                  </path>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div className="price-tag">
+            <span>
+              Rs.340
+            </span>
+          </div>
+          <div className="row1-times">
+            <div className="colright">
+              <div className="row1-time">
+                <div className="time">5.55PM</div>
+                <div className="row2-duration">
+                  <span>2d 21h 47m</span>
+                  <svg className="line" width="1em" height="1em">
+                    <rect width="100%" height="100%" rx="1" ></rect>
+                  </svg>
+                  <svg className="arrow" viewBox="0 0 6 10" width="1em" height="1em">
+                    <path d="M1 1L5 5L1 9V1Z" stroke-width="2" stroke-linejoin="round"></path>
+                  </svg>
+                </div>                
+              </div>
+              <div className="row2-city">
+                  station1
+              </div>
+            </div>
+            <div className="colleft">
+              <div className="row1-time">
+                <div>6.55PM</div>
+              </div>
+              <div className="row2-city">
+                station2
+              </div>
+            </div>
+          </div>
+
+
+          .icon-train {
+          // grid-column: 1/span 1;
+          // grid-row: 2/span 1;
+          position: relative;
+          display: flex;
+          background-color: aqua;
+          .lvl2{
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 44px;
+          width: 44px;
+          background: #bbb;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          margin-left: 0;
+          top: 4px;
+          left: -2px;
+          }
+          }
+          .price-tag{
+          grid-column: 5/span 1;
+          grid-row: 1/span 1;
+          align-self: start;
+          span{
+          font-size: 20px;
+          margin-bottom: 10px;
+          line-height: 1.5;
+          text-align: right;
+          }
+          }
+          .row1-time{
+          display: flex;
+          grid-column: 2/span 3;
+          grid-row: 2/span 1;
+          margin: 0;
+          overflow: hidden;
+          .colright{
+          width: calc(50% + 12px);
+          padding-right: 24px;
+          overflow: hidden;
+          .row1-time{
+          display: flex;
+          .time{
+          display: flex;
+          font-size: 20px;
+          margin-right: 10px;
+          line-height: 1.5;
+          }
+          }
+          .row2-duration{
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex: 1;
+          margin-left: 16px;
+          font-size: 14px;
+          line-height: 1;
+          span{
+          display: flex;
+          background-color: #fff;
+          font-size: 12px;
+          padding: 0 2px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+          font-style: italic;
+          flex: 1 0 auto;
+          z-index: 1;
+          }
+          .line{
+          height: 2px;
+          width: 100%;
+          color: #c0c0c0;
+          vertical-align: middle;
+          line-height: 1;
+          overflow: hidden;
+          }
+          .arrow{
+          position: absolute;
+          right: 0;
+          top: calc(50% - 5px);
+          stroke: #e2e2e2;
+          color: #e2e2e2;
+          height: 10px;
+          width: 6px;
+          vertical-align: middle;
+          overflow: hidden;
+          }
+          }
+          }
+          }
+          .row2-city{
+          line-height: 1.5;
+          margin-top: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          }

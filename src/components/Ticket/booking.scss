@@ -1,0 +1,592 @@
+@import '../../sass/colors.scss';
+@import '../../sass/fonts.scss';
+
+div{
+  display: block;
+}
+
+.flex1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0.4em;
+  gap: var(--gap, 1rem);
+}
+
+.booking{
+  width: 100%;
+  height: 100%;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "RazerF5", Arial, Helvetica, sans-serif;
+    color:$primary;
+    font-size: var(--step-4);
+    line-height: 1;
+  }
+  .move-top{
+    position: fixed;
+    width:4rem;
+    height: 4rem;
+    background-color:$primary;
+    bottom:6em;
+    right: 3em;
+    border-radius: 50%;
+    z-index: 2;
+    svg{
+      position: relative;
+      top: 13%;
+      left: 13%;
+    }
+  }
+}
+
+
+.book-form {
+  padding: max(2vh, 2%);
+  padding-left: 13%;
+
+  min-height: 50vh;
+  width: min(90%, 65vw);
+  
+  margin-inline: auto;
+  margin-bottom: 10vh;
+
+  justify-content: center;
+  background-color: #00000080;
+  color: $icons;
+  overflow: hidden;
+
+  p {
+    margin:3px;
+    color: $icons;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: var(--step-1);
+    line-height: 1;
+  }
+  .box-left {
+    min-height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+
+    h2 {
+      text-transform: uppercase;
+      color: $primary;
+      font-family: 'Russo One', sans-serif;
+      font-size: var(--step-3);
+      line-height: 0;
+    }
+
+    #subH2 {
+      color: $lightest;
+      font-size: var(--step-1);
+      line-height: 0;
+    }
+  }
+  .box-right {
+    width: 75%;
+    .right-col1{
+      height: 50%;
+      // background-color: rgb(245, 75, 75);
+    }
+    .right-col2{
+      height: 50%;
+      // background-color: rgb(245, 140, 140);
+    }
+    .col1{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // background-color: red;
+      justify-content: end;
+      // align-items: center;
+    }
+    select,
+    input,
+    button{
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: $inputColor;
+      background-color: $nav;
+      border:0;
+      margin-bottom: 25px;
+      padding: var(--step--2);
+    }
+    input[type='date']::-webkit-calendar-picker-indicator{
+      background: transparent;
+      bottom: 0;
+      cursor: pointer;
+      height: 40%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 25px;
+      width: 99%;
+    }
+    input[type='number']{
+      width: 20em;
+    }
+    button{
+      float: right;
+      background-color: $primary;
+      font-family: 'Roboto',
+      sans-serif;
+      border-radius: 7px;
+      text-transform: uppercase;
+      font-size: 18px;
+      width: 7em;
+      color: black;
+      cursor: pointer;
+    }
+    #btn-high{
+      color: black;
+      &:hover{
+        background-color: $primary;
+        box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.24);
+      }
+    }
+    #btn-low{
+      color: $inputColor;
+      background-color:#ffffff00;
+      border: 1px solid $inputColor;
+      &:hover{
+        color:#ffffffdc;
+        border: 1px solid #ffffffdc;
+      }
+    }
+    select{
+      width: 13rem;
+    }
+    label{
+      color: $icons;
+      margin-bottom: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  }
+}
+
+@media (max-width: 1264px) {
+  .book-form{
+    .box-right{
+      *{
+        display: block;
+        // flex-direction: column;
+        width: 100%;
+      }
+      select,
+      input,
+      button,
+      input[type=number]{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.SResultBox {
+  display: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: max(2vh, 2%);
+  justify-content: center;
+  min-height: auto;
+  width: min(90%, 65vw);
+  margin-inline: auto;
+  margin-bottom: 10vh;
+  // background-color: $bg_mid_dark;
+  color: #000;
+  overflow: hidden;
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr .7fr;
+    grid-gap: 2px;
+  }
+
+  .train-trip-info {
+    position: relative;
+    margin: .7em 0;
+    max-width: 100%;
+    padding: 1em;
+    color: #fff;
+    border-bottom: 1px solid $primary;
+    // border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.651);
+    .column {
+      // background-color: #444444;
+      min-height: 50px;
+    }
+
+    .hrow1 {
+      min-height: 3em;
+    }
+    
+    .hrow2 {
+      min-height: 3em;
+    }
+    
+    .hrow3 {
+      min-height: 3em;
+    }
+    
+    .hrow4 {
+      min-height: 13em;
+    }
+    
+    .hrow5 {
+      min-height: 2em;
+    }
+
+    #c1{
+      position: relative;
+      
+      #icon {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        width: 44px;
+        background-color: #222;
+        border-radius: 50%;
+        border: 1px solid #5e5e5e;
+        margin-left: 0;
+        top: 4px;
+        left: -2px;
+        svg {
+          fill: $primary;
+        }
+      }
+      #name{
+        position: absolute;
+        left: 3em;
+        top: 1rem;
+        white-space: nowrap;
+        line-height: 1;
+        overflow-y: visible;
+        .name{
+          margin-right: 1em;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-family: 'JetBrains Mono',
+          monospace;
+        }
+        .des{
+          font-size: 14px;
+          color:$inputColor;
+        }
+        .val{
+          font-size:22px;
+          color:$primary;
+          background-color: #292828;
+        }
+        .unit{
+          font-style: italic;
+          color:$primary;
+          font-family: 'Federo', sans-serif;
+          background-color: #292828;
+        }
+      }
+      
+    }
+    #c2{
+      font-family: 'Black Ops One', cursive;
+    }
+    #c3{
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      span{
+        font-size: 22px;
+        // font-family: 'Black Ops One', cursive;
+        font-family: 'Racing Sans One', cursive;
+      }
+    }
+    #c4{
+      span{
+        float: right;
+        font-size: 24px;
+        font-family: 'Russo One',
+        sans-serif;
+        color: $primary;
+        line-height: 1.5;
+      }
+    }
+
+    #c6, #c7{
+      .col-from, .col-to{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: .1rem 0;
+        .frow1{
+          span{
+            font-size: 30px;
+            font-family: 'Oswald',
+            sans-serif;
+            font-weight: 900;
+          }
+        }
+        .frow2{
+          padding-top: 6px;
+          font-family: 'Roboto',
+          sans-serif;
+          font-size: larger;
+          color: $inputColor;
+        }
+      }
+
+    }
+    #c6{
+      position: relative;
+      .hr{
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: $inputColor;
+        top: 44%;
+        right: 5px;//-20
+
+        .duration {
+          display: flexbox;
+          position: absolute;
+          top: -8px;
+          right: 3em;
+          background-color: #222;
+          color: $primary;
+          font-family: 'Nova Mono',
+          monospace;
+          white-space: nowrap;
+          justify-content: space-between;
+          font-style: italic;
+          line-height: 1;
+          padding: 3px;
+        }
+      }
+      .arrow-duration{
+        .arrow{
+          display: flexbox;
+          fill: $inputColor;
+          position: absolute;
+          top: 37%;
+          right: 0;//-25
+          justify-content: space-between;
+        }
+      }
+      
+    }
+
+    #c7{
+      padding-left: 3em;
+    }
+    #c8{
+      display: flex;
+      padding: 0.1rem;
+      button{
+        width: 100%;
+        height: 60%;
+        border-radius: 7px;
+        border: none;
+        text-transform: uppercase;
+        background-color: $primary;
+        font-family: 'Roboto',
+        sans-serif;
+        font-size: 18px;
+        cursor: pointer;
+        &:hover {
+          background-color: $primary;
+          box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.24);
+        }
+        & *{
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+    #c9{
+      button{
+        margin-top: 10%;
+        border-radius: 100vh;
+        border: 1px solid $inputColor;
+        color: $inputColor;
+        padding: 4px 15px;
+        font-size: 15px;
+        background-color: #222;
+        text-shadow: 1px 1px #000000da;
+        cursor: pointer;
+        &:hover{
+          border: 1px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+    .hrow4{
+      display: none;
+    }
+    .norow{
+      display: none;
+    }
+    .c13{
+      position: relative;
+      .time1, .time2{
+        text-align: right;
+        position: absolute;
+        right: 10px;
+        color: #dadada;
+
+        font-size: 18px;
+        font-family: 'Russo One',
+        sans-serif;
+        font-weight: 900;
+      }
+      .time1{
+        top: 0;
+      }
+      .time2{
+        bottom: 0;
+      }
+      .timeicon{
+        position: absolute;
+        top: 6em;
+        right: 0;
+        fill: $primary;
+      }
+    }
+
+    .c14{
+      position: relative;
+      // display: flex;
+      .col1{
+        height: 100%;
+        width: 10%;
+        // background-color: #e74242;
+        .circletop,
+        .circlebott {
+          position: absolute;
+          left: 0;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #c4c4c4;
+        }  
+        .circletop {
+          top: 0;
+        }
+        .circlebott {
+          bottom: 0;
+        }
+        .line {
+          position: absolute;
+          width: 3px;
+          height: 100%;
+          background-color: #c4c4c4;
+          margin-left: 6px;
+        }
+      }
+      .col2{
+        position: relative;
+        height: 100%;
+        min-width: 70%;
+        white-space: nowrap;
+        overflow-x: visible;
+        .citytop, .citybott{
+          font-family: 'Russo One',
+          sans-serif;
+          color: #c4c4c4;
+          font-size: 29px;
+        }
+        .stationtop,.stationbott{
+          font-family: 'Roboto',
+          sans-serif;
+          color: $inputColor;
+        }
+        .citytop, .stationtop{
+          position: absolute;
+          left: 10px;
+        }
+        .citytop{
+          top: 0;
+          font-size: 18px;
+          font-weight: 800;
+        }
+        .stationtop{
+          top: 2em;
+        }
+        .duration{
+          position: absolute;
+          color: $primary;
+          font-family: 'Nova Mono',
+          monospace;
+          white-space: nowrap;
+          font-style: italic;
+          top: 6em;
+          left: .6rem;
+          line-height: .1;
+        }
+        .citybott, .stationbott{
+          position: absolute;
+          left: 10px;   
+        }
+        .citybott{
+          font-size: 18px;
+          font-weight: 800;
+          line-height: .1;
+          bottom: 2em
+        }
+        .stationbott{
+          bottom: 0;          
+        }
+      }
+      
+    }
+    #c9{
+      white-space: nowrap;
+      padding-bottom: 1em;
+      .seatbtn{
+        margin-left: 1em;
+        color: $primary;
+        border: 1px solid $primary;
+        cursor:default;
+      }
+      .icon-seat{
+        width:1em;
+        height: 1em;
+        g{
+          path{
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1566px) {
+  #c6{
+    .duration{
+      display: none;
+    }
+  }
+}
+@media (max-width: 1104px) {
+  #c6 {
+    .duration,.arrow-duration {
+      display: none;
+    }
+  }
+}
+@media (max-width: 694px) {
+  .train-trip-info *{
+    display: none;
+  }
+}
+
+
+
+
+
+
